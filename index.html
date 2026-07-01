@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yuye Ding — Job Market Candidate</title>
+<meta name="description" content="Yuye Ding, PhD Candidate in Accounting, University of Pittsburgh. 2026-27 Job Market Candidate.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F1F4EC;
+    --paper-deep:#E7ECDF;
+    --paper-card:#EAEFE2;
+    --line:#C7D2BC;
+    --line-soft:#D6DECC;
+    --ink:#1E2B23;
+    --ink-soft:#4B5A4C;
+    --ink-faint:#7C8A7A;
+    --brass:#9B7A2E;
+    --brass-deep:#7C6224;
+    --rust:#9C4030;
+    --white:#FBFCF9;
+    --shadow: 0 1px 0 rgba(30,43,35,0.06);
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}
+  }
+
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Source Sans 3', sans-serif;
+    font-size:16.5px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1,h2,h3{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    margin:0;
+    color:var(--ink);
+  }
+
+  a{color:var(--brass-deep); text-decoration:none; border-bottom:1px solid rgba(155,122,46,0.35);}
+  a:hover{border-bottom-color:var(--brass-deep);}
+
+  .mono{font-family:'IBM Plex Mono', monospace;}
+
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--brass);
+    margin-bottom:8px;
+    display:block;
+  }
+
+  .wrap{max-width:900px; margin:0 auto; padding:0 28px;}
+
+  /* ---------- NAV ---------- */
+  nav.topbar{
+    position:sticky; top:0; z-index:50;
+    background:rgba(241,244,236,0.94);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  nav.topbar .wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:14px 28px;
+    gap:16px;
+  }
+  nav.topbar .brandmark{
+    font-family:'Fraunces', serif; font-weight:600; font-size:1.05rem; color:var(--ink);
+    white-space:nowrap;
+  }
+  nav.topbar .links{
+    display:flex; gap:22px; overflow-x:auto; scrollbar-width:none;
+  }
+  nav.topbar .links::-webkit-scrollbar{display:none;}
+  nav.topbar .links a{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.76rem;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    border-bottom:none;
+    white-space:nowrap;
+  }
+  nav.topbar .links a:hover{color:var(--brass-deep);}
+
+  /* ---------- HERO ---------- */
+  header.hero{
+    position:relative;
+    padding:64px 0 40px;
+    background-image: repeating-linear-gradient(
+      to bottom,
+      transparent 0px, transparent 31px, var(--line-soft) 32px
+    );
+    border-bottom:3px double var(--line);
+  }
+  header.hero .wrap{position:relative;}
+  .hero-top{
+    display:flex; justify-content:space-between; align-items:flex-start; gap:32px; flex-wrap:wrap;
+  }
+  .hero-name{
+    font-size:clamp(2.4rem, 5vw, 3.4rem);
+    line-height:1.05;
+    letter-spacing:-0.01em;
+  }
+  .hero-role{
+    margin-top:10px;
+    font-size:1.05rem;
+    color:var(--ink-soft);
+    font-family:'Source Sans 3', sans-serif;
+    max-width:520px;
+  }
+  .hero-role strong{color:var(--ink); font-weight:600;}
+
+  .ledger-card{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:2px;
+    padding:16px 20px;
+    min-width:230px;
+    box-shadow:var(--shadow);
+  }
+  .ledger-card .row{
+    display:flex; justify-content:space-between; gap:12px;
+    padding:5px 0;
+    border-bottom:1px dashed var(--line-soft);
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.78rem;
+  }
+  .ledger-card .row:last-child{border-bottom:none;}
+  .ledger-card .row .label{color:var(--ink-faint); text-transform:uppercase; letter-spacing:0.04em;}
+  .ledger-card .row .value{color:var(--ink); font-weight:500; text-align:right;}
+
+  .hero-links{
+    margin-top:26px;
+    display:flex; gap:14px; flex-wrap:wrap;
+    align-items:center;
+  }
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.78rem;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    padding:10px 16px;
+    border:1px solid var(--ink);
+    border-radius:2px;
+    color:var(--ink);
+    border-bottom:1px solid var(--ink);
+    transition:background 0.15s ease, color 0.15s ease;
+  }
+  .btn.primary{background:var(--ink); color:var(--paper);}
+  .btn.primary:hover{background:var(--brass-deep); border-color:var(--brass-deep);}
+  .btn:not(.primary):hover{background:var(--paper-deep);}
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:56px 0;}
+  section + section{border-top:1px solid var(--line);}
+  .section-head{margin-bottom:28px; max-width:620px;}
+  .section-head h2{font-size:1.7rem;}
+
+  p{color:var(--ink-soft);}
+  #about p{font-size:1.05rem; max-width:680px;}
+
+  /* ---------- IMPACT LEDGER (signature element) ---------- */
+  .impact-ledger{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    border:1px solid var(--line);
+    border-radius:2px;
+    background:var(--white);
+    overflow:hidden;
+  }
+  .impact-ledger .stat{
+    padding:20px 18px;
+    border-right:1px solid var(--line-soft);
+    text-align:left;
+  }
+  .impact-ledger .stat:last-child{border-right:none;}
+  .impact-ledger .stat .num{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:1.7rem;
+    font-weight:600;
+    color:var(--rust);
+    display:block;
+  }
+  .impact-ledger .stat .lbl{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    color:var(--ink-faint);
+    margin-top:6px;
+    display:block;
+  }
+  @media (max-width:640px){
+    .impact-ledger{grid-template-columns:repeat(2,1fr);}
+    .impact-ledger .stat:nth-child(2){border-right:none;}
+  }
+
+  /* ---------- DISSERTATION / JMP CARD ---------- */
+  .jmp-card{
+    background:var(--paper-card);
+    border-top:3px double var(--brass);
+    border-bottom:3px double var(--brass);
+    padding:26px 28px;
+    margin-top:26px;
+  }
+  .stamp{
+    display:inline-block;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    padding:4px 10px;
+    border:1.5px dashed var(--rust);
+    color:var(--rust);
+    transform:rotate(-1.2deg);
+    margin-bottom:14px;
+  }
+  .jmp-card h3{font-size:1.25rem; line-height:1.4;}
+  .jmp-card .committee{margin-top:14px; font-size:0.9rem; color:var(--ink-soft);}
+
+  /* ---------- WORKING PAPERS ---------- */
+  .paper{
+    padding:22px 0;
+    border-bottom:1px solid var(--line-soft);
+  }
+  .paper:last-child{border-bottom:none;}
+  .paper-top{display:flex; justify-content:space-between; align-items:flex-start; gap:16px; flex-wrap:wrap;}
+  .paper h3{font-size:1.08rem; line-height:1.45; font-weight:500;}
+  .paper .authors{font-size:0.85rem; color:var(--ink-faint); margin-top:4px;}
+  .status-pill{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.66rem;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+    padding:3px 9px;
+    border:1px dashed var(--line);
+    color:var(--ink-soft);
+    white-space:nowrap;
+    border-radius:2px;
+  }
+  .status-pill.rr{color:var(--rust); border-color:var(--rust);}
+  .paper .links-row{margin-top:8px; font-size:0.85rem;}
+  .paper ul.notes{margin:10px 0 0; padding-left:18px; font-size:0.9rem; color:var(--ink-soft);}
+  .paper ul.notes li{margin-bottom:3px;}
+
+  /* ---------- MEDIA LIST ---------- */
+  .press-list{margin-top:28px;}
+  .press-item{
+    display:grid;
+    grid-template-columns:150px 1fr;
+    gap:16px;
+    padding:14px 0;
+    border-bottom:1px solid var(--line-soft);
+    font-size:0.92rem;
+  }
+  .press-item .date{font-family:'IBM Plex Mono', monospace; font-size:0.76rem; color:var(--ink-faint); padding-top:2px;}
+  .press-item .outlet{font-weight:600; color:var(--ink); font-family:'Fraunces', serif; font-size:1rem;}
+  .press-item .headline{color:var(--ink-soft);}
+  .press-item[hidden]{display:none;}
+  @media (max-width:600px){
+    .press-item{grid-template-columns:1fr;}
+  }
+  .press-toggle{
+    margin-top:20px;
+    background:none; border:none; cursor:pointer;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.78rem;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--brass-deep);
+    border-bottom:1px solid var(--brass-deep);
+    padding:4px 0;
+  }
+  .press-toggle:hover{color:var(--rust); border-color:var(--rust);}
+
+  /* ---------- TEACHING / EDUCATION / HONORS ---------- */
+  .entry-row{
+    display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap;
+    padding:14px 0;
+    border-bottom:1px solid var(--line-soft);
+  }
+  .entry-row:last-child{border-bottom:none;}
+  .entry-row .who h3{font-size:1.02rem; font-weight:500;}
+  .entry-row .who .sub{font-size:0.85rem; color:var(--ink-faint); margin-top:2px;}
+  .entry-row .when{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.78rem;
+    color:var(--ink-soft);
+    white-space:nowrap;
+    padding-top:3px;
+  }
+
+  .honors-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px 32px;}
+  @media (max-width:600px){.honors-grid{grid-template-columns:1fr;}}
+  .honors-grid li{list-style:none; padding-left:18px; position:relative; color:var(--ink-soft);}
+  .honors-grid li::before{
+    content:"§"; position:absolute; left:0; color:var(--brass); font-family:'IBM Plex Mono', monospace;
+  }
+
+  .conf-row{
+    display:flex; justify-content:space-between; gap:12px; padding:10px 0;
+    border-bottom:1px dashed var(--line-soft);
+    font-size:0.92rem;
+  }
+  .conf-row:last-child{border-bottom:none;}
+  .conf-row .role{font-size:0.78rem; color:var(--ink-faint); font-family:'IBM Plex Mono', monospace;}
+
+  /* ---------- CONTACT / FOOTER ---------- */
+  footer{
+    background:var(--ink);
+    color:var(--paper);
+    padding:52px 0 34px;
+  }
+  footer .eyebrow{color:#C9B879;}
+  footer h2{color:var(--white); font-size:1.6rem;}
+  footer p{color:#C3CDC0; max-width:560px;}
+  footer .contact-links{display:flex; gap:20px; flex-wrap:wrap; margin-top:20px;}
+  footer a{color:#E8E2C6; border-bottom-color:rgba(232,226,198,0.4);}
+  footer a:hover{border-bottom-color:#E8E2C6;}
+  footer .fine{
+    margin-top:36px; padding-top:18px; border-top:1px solid rgba(255,255,255,0.12);
+    font-family:'IBM Plex Mono', monospace; font-size:0.72rem; color:#8AA087;
+  }
+</style>
+</head>
+<body>
+
+<nav class="topbar">
+  <div class="wrap">
+    <div class="brandmark">Y. Ding</div>
+    <div class="links">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#media">Media</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#education">Education</a>
+      <a href="#honors">Honors</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-top">
+      <div>
+        <h1 class="hero-name">Yuye Ding</h1>
+        <p class="hero-role">
+          PhD Candidate in Accounting, <strong>University of Pittsburgh</strong> — 2026&ndash;27 job market candidate
+          researching corporate governance, financial reporting, labor markets, and artificial intelligence.
+        </p>
+      </div>
+      <div class="ledger-card mono">
+        <div class="row"><span class="label">Field</span><span class="value">Accounting</span></div>
+        <div class="row"><span class="label">Institution</span><span class="value">Univ. of Pittsburgh</span></div>
+        <div class="row"><span class="label">Anticipated PhD</span><span class="value">Apr 2027</span></div>
+        <div class="row"><span class="label">Available</span><span class="value">Summer / Fall 2027</span></div>
+      </div>
+    </div>
+    <div class="hero-links">
+      <a class="btn primary" href="mailto:yud69@pitt.edu">Email me</a>
+      <a class="btn" href="https://linkedin.com/in/yuye-ding-81a01817b" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="./Yuye_Ding_CV.pdf" target="_blank" rel="noopener">Download CV</a>
+      <a class="btn" href="https://ssrn.com/abstract=4675401" target="_blank" rel="noopener">SSRN</a>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Introduction</span>
+      <h2>About</h2>
+    </div>
+    <p>
+      I am Yuye Ding, a fifth-year PhD candidate in Accounting at the University of Pittsburgh. I am excited to be
+      on this year's job market, actively seeking a tenure-track Assistant Professor position. My research interests
+      include corporate governance, financial reporting, labor markets, and artificial intelligence.
+    </p>
+    <p>
+      I anticipate graduating in April 2027 and will be available for appointments starting summer or fall 2027.
+      Thank you so much for taking the time to look at my profile — I would be delighted to speak with any school
+      interested in learning more or scheduling an interview.
+    </p>
+  </div>
+</section>
+
+<section id="research">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Publication Record</span>
+      <h2>Research</h2>
+    </div>
+
+    <div class="jmp-card">
+      <span class="stamp">Job Market Paper</span>
+      <h3>Does SEC Mandatory Clawback Policy Work? The Impact of Rule 10D&#8209;1 on Financial Reporting, Firm Value, and CEO Pay Structure</h3>
+      <div class="committee">
+        <strong>Committee:</strong> Mark (Shuai) Ma (chair), Charles Hadlock, Mei Feng, Dhinu Srinivasan, and
+        Mary Ellen Carter (external, Boston College)
+      </div>
+    </div>
+
+    <div style="margin-top:44px;">
+      <span class="eyebrow">Working Papers</span>
+
+      <div class="paper">
+        <div class="paper-top">
+          <div>
+            <h3>Working from Home After Hours? Right to Disconnect Laws, Firm Profitability, and Employee Work-Life Balance</h3>
+            <div class="authors">Ding, Yuye · Mark (Shuai) Ma · Zhuoying Niu</div>
+          </div>
+          <span class="status-pill rr">R&amp;R, Contemporary Accounting Research</span>
+        </div>
+        <div class="links-row"><a href="https://ssrn.com/abstract=5394611" target="_blank" rel="noopener">SSRN: abstract=5394611</a></div>
+        <ul class="notes">
+          <li>Featured by Columbia Law School Blue Sky Blog, "Are Right to Disconnect Laws Good for Companies?" (Sep 2025)</li>
+        </ul>
+      </div>
+
+      <div class="paper">
+        <div class="paper-top">
+          <div>
+            <h3>Return-to-Office Mandates</h3>
+            <div class="authors">Ding, Yuye · Mark (Shuai) Ma</div>
+          </div>
+          <span class="status-pill">Under Review, Journal of Management Accounting Research</span>
+        </div>
+        <div class="links-row"><a href="https://ssrn.com/abstract=4675401" target="_blank" rel="noopener">SSRN: abstract=4675401</a></div>
+        <ul class="notes">
+          <li>Named by the <em>Financial Times</em> among business school studies with the highest real-world impact</li>
+          <li>Covered by news media 500+ times; over 2 billion views in 2024</li>
+          <li>Top 300 most-downloaded study on SSRN across all disciplines (as of Jan 2025)</li>
+          <li>Cited twice in U.S. House Committee hearings on federal workplace policy</li>
+          <li>Cited by UK Parliament, Home-based Working Committee meeting (Mar 2025)</li>
+        </ul>
+      </div>
+
+      <div class="paper">
+        <div class="paper-top">
+          <div>
+            <h3>Pay Range Disclosure Law and Gender Pay Gap</h3>
+            <div class="authors">Ding, Yuye · Mark (Shuai) Ma</div>
+          </div>
+          <span class="status-pill">Under Review, Contemporary Accounting Research</span>
+        </div>
+        <div class="links-row"><a href="https://ssrn.com/abstract=6622178" target="_blank" rel="noopener">SSRN: abstract=6622178</a></div>
+      </div>
+
+      <div class="paper">
+        <div class="paper-top">
+          <div>
+            <h3>Return-to-Office Mandates and Brain Drain</h3>
+            <div class="authors">Ding, Yuye · Zhao Jin · Mark (Shuai) Ma · Betty Bin Xing · Yucheng Yang</div>
+          </div>
+          <span class="status-pill">Under Review, Strategic Management Journal</span>
+        </div>
+        <div class="links-row"><a href="https://dx.doi.org/10.2139/ssrn.5031481" target="_blank" rel="noopener">SSRN: abstract=5031481</a></div>
+        <ul class="notes">
+          <li>Covered by news media 100+ times, including the Wall Street Journal, Washington Post, Forbes, and The Hill</li>
+        </ul>
+      </div>
+
+      <div class="paper">
+        <div class="paper-top">
+          <div>
+            <h3>Tracking Artificial Intelligence Sentiment in the U.S. Labor Market</h3>
+            <div class="authors">Ding, Yuye · Mark (Shuai) Ma · Jun Wu · Yucheng Yang</div>
+          </div>
+          <span class="status-pill">Working Paper</span>
+        </div>
+        <div class="links-row"><a href="https://ssrn.com/abstract=6652799" target="_blank" rel="noopener">SSRN: abstract=6652799</a></div>
+        <ul class="notes">
+          <li>Featured by Fortune, Business Insider, and the Pittsburgh Post-Gazette</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="margin-top:44px;">
+      <span class="eyebrow">Conferences &amp; Workshops</span>
+      <div class="conf-row"><span>2026 AAA Global Connect (formerly Annual Meeting) <span class="role">Presenter</span></span><span class="mono" style="font-size:0.82rem; color:var(--ink-faint);">Aug 2026</span></div>
+      <div class="conf-row"><span>2026 Financial Accounting and Reporting Section Midyear Meeting <span class="role">Participant</span></span><span class="mono" style="font-size:0.82rem; color:var(--ink-faint);">Jan 2026</span></div>
+      <div class="conf-row"><span>AAA/Deloitte Foundation/J. Michael Cook Doctoral Consortium <span class="role">Participant</span></span><span class="mono" style="font-size:0.82rem; color:var(--ink-faint);">Jun 2025</span></div>
+      <div class="conf-row"><span>Creating Resilient Organizations: Evidence from Research on Sustainability <span class="role">Participant</span></span><span class="mono" style="font-size:0.82rem; color:var(--ink-faint);">May 2025</span></div>
+      <div class="conf-row"><span>Academy of Management Annual Meeting <span class="role">Presenter</span></span><span class="mono" style="font-size:0.82rem; color:var(--ink-faint);">Aug 2024</span></div>
+      <div class="conf-row"><span>Hawaii Accounting Research Doctoral Institute (HARDI) Consortium <span class="role">Participant</span></span><span class="mono" style="font-size:0.82rem; color:var(--ink-faint);">Jun 2024</span></div>
+      <div class="conf-row"><span>AAA Spark Meeting <span class="role">Presenter</span></span><span class="mono" style="font-size:0.82rem; color:var(--ink-faint);">May 2024</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="media">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">In the Press</span>
+      <h2>Media Coverage</h2>
+    </div>
+
+    <div class="impact-ledger" id="impactLedger">
+      <div class="stat"><span class="num" data-target="4" data-suffix="B+">0</span><span class="lbl">Total media views</span></div>
+      <div class="stat"><span class="num" data-target="600" data-suffix="+">0</span><span class="lbl">Press mentions</span></div>
+      <div class="stat"><span class="num" data-target="2" data-suffix="x">0</span><span class="lbl">US House citations</span></div>
+      <div class="stat"><span class="num" data-target="300" data-prefix="Top " data-suffix="">0</span><span class="lbl">SSRN downloads rank</span></div>
+    </div>
+
+    <div class="press-list" id="pressList">
+      <div class="press-item"><div class="date mono">May 2026</div><div><div class="outlet">Business Insider</div><div class="headline">One way companies are making AI backlash worse — <a href="https://www.businessinsider.com/ceos-cite-ai-for-job-cuts-while-urging-worker-adoption-2026-5" target="_blank" rel="noopener">read</a></div></div></div>
+      <div class="press-item"><div class="date mono">May 2026</div><div><div class="outlet">Pittsburgh Post-Gazette</div><div class="headline">As students protest artificial intelligence, Pitt professor cautions on AI adoption — <a href="https://www.post-gazette.com/business/tech-news/2026/05/30/artificial-intelligence-workforce-job-displacement-pitt/stories/202605220063" target="_blank" rel="noopener">read</a></div></div></div>
+      <div class="press-item"><div class="date mono">Oct 2025</div><div><div class="outlet">The Wall Street Journal</div><div class="headline">Women's pay is falling behind — is the return to office to blame? — <a href="https://www.wsj.com/economy/gender-pay-gap-return-to-office-002bb828" target="_blank" rel="noopener">read</a></div></div></div>
+      <div class="press-item"><div class="date mono">Sep 2025</div><div><div class="outlet">Forbes</div><div class="headline">Why right to disconnect laws won't end the endless workday — <a href="https://www.forbes.com/sites/niritcohen/2025/09/03/why-right-to-disconnect-laws-wont-end-the-endless-workday/" target="_blank" rel="noopener">read</a></div></div></div>
+      <div class="press-item"><div class="date mono">May 2025</div><div><div class="outlet">Fortune</div><div class="headline">Jamie Dimon on remote workers and JPMorgan's stance — <a href="https://fortune.com/2025/05/19/jamie-dimon-remote-workers-jpmorgan/" target="_blank" rel="noopener">read</a></div></div></div>
+      <div class="press-item"><div class="date mono">Feb 2025</div><div><div class="outlet">The Economist</div><div class="headline">How to get people to resign — <a href="https://www.economist.com/business/2025/02/13/how-to-get-people-to-resign" target="_blank" rel="noopener">read</a></div></div></div>
+
+      <div class="press-item" hidden><div class="date mono">Feb 2025</div><div><div class="outlet">Fortune</div><div class="headline">High performers are the exception to strict RTO rules — <a href="https://fortune.com/2025/02/09/top-performers-rto-rules-favoritism-toxic-workplace/" target="_blank" rel="noopener">read</a></div></div></div>
+      <div class="press-item" hidden><div class="date mono">Feb 2025</div><div><div class="outlet">Washington Post</div><div class="headline">Bosses are exerting their power amid a shifting policy climate — <a href="https://www.washingtonpost.com/business/2025/02/03/work-culture-strict-policies-trump-trends/" target="_blank" rel="noopener">read</a></div></div></div>
+      <div class="press-item" hidden><div class="date mono">Feb 2025</div><div><div class="outlet">CNBC</div><div class="headline">What's in store for remote work and RTO in 2025 — <a href="https://www.cnbc.com/2025/02/02/whats-in-store-for-remote-work-and-rto-in-2025.html" target="_blank" rel="noopener">read</a></div></div></div>
+      <div class="press-item" hidden><div class="date mono">Jan 2025</div><div><div class="outlet">Forbes</div><div class="headline">Return to office? This leader treats employees like adults — <a href="https://www.forbes.com/sites/niritcohen/2025/01/08/return-to-office-this-leader-treats-employees-like-adults/" target="_blank" rel="noopener">read</a></div></div></div>
+      <div class="press-item" hidden><div class="date mono">Dec 2024</div><div><div class="outlet">Washington Post</div><div class="headline">Companies that mandate return to office see slower workforce growth — <a href="https://www.washingtonpost.com/business/2024/12/18/return-to-office-mandate-workforce-growth/" target="_blank" rel="noopener">read</a></div></div></div>
+      <div class="press-item" hidden><div class="date mono">Dec 2024</div><div><div class="outlet">Bloomberg</div><div class="headline">AT&amp;T, Sweetgreen demand more days in office, joining Amazon — <a href="https://www.bloomberg.com/news/articles/2024-12-18/at-t-sweetgreen-up-mandatory-days-in-office-for-rto-policy" target="_blank" rel="noopener">read</a></div></div></div>
+      <div class="press-item" hidden><div class="date mono">Dec 2024</div><div><div class="outlet">Fortune</div><div class="headline">RTO mandates linked to an exodus of high performers, research finds — <a href="https://fortune.com/2024/12/11/return-to-office-mandate-employees-study/" target="_blank" rel="noopener">read</a></div></div></div>
+      <div class="press-item" hidden><div class="date mono">Dec 2024</div><div><div class="outlet">Washington Post</div><div class="headline">Return-to-work mandates are an invisible pay cut — <a href="https://www.washingtonpost.com/opinions/2024/12/06/return-to-work-mandate-pay-cut/" target="_blank" rel="noopener">read</a></div></div></div>
+      <div class="press-item" hidden><div class="date mono">Nov 2024</div><div><div class="outlet">Financial Times</div><div class="headline">Research paper downloads act as proxy for academics' real-world influence — <a href="https://www.ft.com/content/94a63515-d197-4d88-b176-d177ac1226be" target="_blank" rel="noopener">read</a></div></div></div>
+      <div class="press-item" hidden><div class="date mono">May 2024</div><div><div class="outlet">CBS News</div><div class="headline">Some companies plan to increase return-to-office requirements — <a href="https://www.cbsnews.com/news/return-to-work-in-office-2025/" target="_blank" rel="noopener">read</a></div></div></div>
+      <div class="press-item" hidden><div class="date mono">May 2024</div><div><div class="outlet">Fortune</div><div class="headline">Talented workers at Apple, Microsoft, and SpaceX left after RTO mandates — <a href="https://fortune.com/2024/05/16/apple-microsoft-spacex-employees-quit-return-office-study/" target="_blank" rel="noopener">read</a></div></div></div>
+      <div class="press-item" hidden><div class="date mono">Apr 2024</div><div><div class="outlet">Thomson Reuters</div><div class="headline">Office attendance policies and employee satisfaction across industries — <a href="https://www.thomsonreuters.com/en-us/posts/legal/office-attendance-policies-employee-satisfaction/" target="_blank" rel="noopener">read</a></div></div></div>
+      <div class="press-item" hidden><div class="date mono">Apr 2024</div><div><div class="outlet">Federal News Network</div><div class="headline">Return to office in four parts: feds facing pressure to reduce telework — <a href="https://federalnewsnetwork.com/federal-report/2024/04/return-to-office-in-4-parts-fed-facing-the-may-5-deadline/" target="_blank" rel="noopener">read</a></div></div></div>
+      <div class="press-item" hidden><div class="date mono">Mar 2024</div><div><div class="outlet">Euronews</div><div class="headline">Managers call remote-work preference a "major red flag" — <a href="https://www.euronews.com/next/2024/03/13/56-of-managers-say-its-a-major-red-flag-when-employees-dont-want-to-come-into-the-office" target="_blank" rel="noopener">read</a></div></div></div>
+      <div class="press-item" hidden><div class="date mono">Feb 2024</div><div><div class="outlet">BBC</div><div class="headline">The executive hubris driving five-day in-office mandates — <a href="https://www.bbc.com/worklife/article/20240216-the-executive-hubris-driving-five-day-in-office-mandates" target="_blank" rel="noopener">read</a></div></div></div>
+      <div class="press-item" hidden><div class="date mono">Feb 2024</div><div><div class="outlet">Financial Times</div><div class="headline">Work from home if you want, but don't expect a pay rise — <a href="https://www.ft.com/content/b8ac6288-6b63-4d1b-bc9b-d8e81c45a098" target="_blank" rel="noopener">read</a></div></div></div>
+      <div class="press-item" hidden><div class="date mono">Feb 2024</div><div><div class="outlet">Financial Post</div><div class="headline">Ordering workers back to the office a "power grab" by bosses, research suggests — <a href="https://financialpost.com/fp-work/return-to-office-mandates-power-grab-by-bosses-research" target="_blank" rel="noopener">read</a></div></div></div>
+      <div class="press-item" hidden><div class="date mono">Feb 2024</div><div><div class="outlet">Australian Financial Review</div><div class="headline">Office mandates offer no financial benefit and staff hate them, study finds — <a href="https://www.afr.com/work-and-careers/workplace/office-mandates-offer-no-financial-benefit-and-staff-hate-them-study-20240202-p5f1xt" target="_blank" rel="noopener">read</a></div></div></div>
+      <div class="press-item" hidden><div class="date mono">Jan 2024</div><div><div class="outlet">Washington Post</div><div class="headline">Office mandates don't help companies make more money, study finds — <a href="https://www.washingtonpost.com/technology/2024/01/24/return-to-office-mandates-company-performance/" target="_blank" rel="noopener">read</a></div></div></div>
+      <div class="press-item" hidden><div class="date mono">Jan 2024</div><div><div class="outlet">Irish Times</div><div class="headline">Working from home isn't hurting companies — <a href="https://www.irishtimes.com/your-money/2024/01/16/working-from-home-isnt-hurting-companies" target="_blank" rel="noopener">read</a></div></div></div>
+      <div class="press-item" hidden><div class="date mono">Jan 2024</div><div><div class="outlet">Fortune</div><div class="headline">Bosses use RTO mandates as a scapegoat for bad firm performance, research finds — <a href="https://fortune.com/2024/01/13/managers-scapegoating-workers-return-to-office/" target="_blank" rel="noopener">read</a></div></div></div>
+      <div class="press-item" hidden><div class="date mono">Jan 2024</div><div><div class="outlet">Business Insider</div><div class="headline">RTO policies don't improve performance or company value, data shows — <a href="https://www.businessinsider.com/rto-policies-dont-improve-employee-performance-company-value-controlling-bosses-2024-1" target="_blank" rel="noopener">read</a></div></div></div>
+    </div>
+    <button class="press-toggle" id="pressToggle">Show all coverage (28)</button>
+  </div>
+</section>
+
+<section id="teaching">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Classroom</span>
+      <h2>Teaching Experience</h2>
+    </div>
+    <div class="entry-row">
+      <div class="who"><h3>Lecturer — Financial Accounting</h3><div class="sub">University of Pittsburgh · Evaluation 4.24 / 5.00</div></div>
+      <div class="when mono">Fall 2025</div>
+    </div>
+    <div class="entry-row">
+      <div class="who"><h3>Lecturer — Financial Accounting</h3><div class="sub">University of Pittsburgh · Evaluation 4.27 / 5.00</div></div>
+      <div class="when mono">Spring 2025</div>
+    </div>
+    <div class="entry-row">
+      <div class="who"><h3>Teaching Assistant — Financial Accounting</h3><div class="sub">To Nicole Cade, University of Pittsburgh</div></div>
+      <div class="when mono">Fall 2024</div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Curriculum Vitae</span>
+      <h2>Education</h2>
+    </div>
+    <div class="entry-row">
+      <div class="who"><h3>Ph.D. in Accounting</h3><div class="sub">University of Pittsburgh</div></div>
+      <div class="when mono">Aug 2022 – Present</div>
+    </div>
+    <div class="entry-row">
+      <div class="who"><h3>M.S. in Accountancy — Tax / Data Analytics Track</h3><div class="sub">University of Notre Dame</div></div>
+      <div class="when mono">Aug 2021 – May 2022</div>
+    </div>
+    <div class="entry-row">
+      <div class="who"><h3>B.A. in Accounting</h3><div class="sub">Sichuan University</div></div>
+      <div class="when mono">Sep 2016 – Jun 2020</div>
+    </div>
+  </div>
+</section>
+
+<section id="honors">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Recognition</span>
+      <h2>Honors &amp; Awards</h2>
+    </div>
+    <ul class="honors-grid">
+      <li>Sheth Fellowship Award, 2025</li>
+      <li>Jacob Birnberg Recognition Award, 2024/2025</li>
+      <li>Association of Chartered Certified Accountants (ACCA)</li>
+    </ul>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <span class="eyebrow">Get in Touch</span>
+    <h2>Let's talk</h2>
+    <p>
+      I would be delighted to speak with any school interested in learning more about my research or scheduling
+      an interview. The fastest way to reach me is by email.
+    </p>
+    <div class="contact-links">
+      <a href="mailto:yud69@pitt.edu">yud69@pitt.edu</a>
+      <a href="https://linkedin.com/in/yuye-ding-81a01817b" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://ssrn.com/abstract=4675401" target="_blank" rel="noopener">SSRN profile</a>
+      <a href="./Yuye_Ding_CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
+    </div>
+    <div class="fine">Last updated June 2026 · Pittsburgh, PA</div>
+  </div>
+</footer>
+
+<script>
+  // Expand / collapse full press list
+  (function(){
+    const btn = document.getElementById('pressToggle');
+    const items = document.querySelectorAll('#pressList .press-item[hidden]');
+    let expanded = false;
+    btn.addEventListener('click', function(){
+      expanded = !expanded;
+      items.forEach(function(el){ el.hidden = !expanded; });
+      btn.textContent = expanded ? 'Show fewer' : 'Show all coverage (28)';
+    });
+  })();
+
+  // Count-up animation for impact ledger stats
+  (function(){
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const stats = document.querySelectorAll('#impactLedger .num');
+    function animate(el){
+      const target = parseInt(el.dataset.target, 10);
+      const suffix = el.dataset.suffix || '';
+      const prefix = el.dataset.prefix || '';
+      if (reduceMotion) { el.textContent = prefix + target + suffix; return; }
+      let cur = 0;
+      const step = Math.max(1, Math.ceil(target / 40));
+      const iv = setInterval(function(){
+        cur += step;
+        if (cur >= target) { cur = target; clearInterval(iv); }
+        el.textContent = prefix + cur + suffix;
+      }, 25);
+    }
+    const observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting){
+          animate(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.4});
+    stats.forEach(function(s){ observer.observe(s); });
+  })();
+</script>
+
+</body>
+</html>
