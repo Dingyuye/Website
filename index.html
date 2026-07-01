@@ -149,22 +149,17 @@
     display:flex; gap:14px; flex-wrap:wrap;
     align-items:center;
   }
-  .btn{
-    display:inline-flex; align-items:center; gap:8px;
+  .link-plain{
     font-family:'IBM Plex Mono', monospace;
-    font-size:0.78rem;
-    letter-spacing:0.05em;
-    text-transform:uppercase;
-    padding:10px 16px;
-    border:1px solid var(--ink);
-    border-radius:2px;
+    font-size:0.88rem;
     color:var(--ink);
     border-bottom:1px solid var(--ink);
-    transition:background 0.15s ease, color 0.15s ease;
   }
-  .btn.primary{background:var(--ink); color:var(--paper);}
-  .btn.primary:hover{background:var(--brass-deep); border-color:var(--brass-deep);}
-  .btn:not(.primary):hover{background:var(--paper-deep);}
+  .link-plain:hover{color:var(--brass-deep); border-bottom-color:var(--brass-deep);}
+  .link-divider{
+    font-family:'IBM Plex Mono', monospace;
+    color:var(--ink-faint);
+  }
 
   /* ---------- SECTIONS ---------- */
   section{padding:56px 0;}
@@ -178,7 +173,7 @@
   /* ---------- IMPACT LEDGER (signature element) ---------- */
   .impact-ledger{
     display:grid;
-    grid-template-columns:repeat(4, 1fr);
+    grid-template-columns:repeat(3, 1fr);
     border:1px solid var(--line);
     border-radius:2px;
     background:var(--white);
@@ -207,8 +202,9 @@
     display:block;
   }
   @media (max-width:640px){
-    .impact-ledger{grid-template-columns:repeat(2,1fr);}
-    .impact-ledger .stat:nth-child(2){border-right:none;}
+    .impact-ledger{grid-template-columns:1fr;}
+    .impact-ledger .stat{border-right:none; border-bottom:1px solid var(--line-soft);}
+    .impact-ledger .stat:last-child{border-bottom:none;}
   }
 
   /* ---------- DISSERTATION / JMP CARD ---------- */
@@ -346,11 +342,13 @@
     <div class="brandmark">Y. Ding</div>
     <div class="links">
       <a href="#about">About</a>
-      <a href="#research">Research</a>
-      <a href="#media">Media</a>
-      <a href="#teaching">Teaching</a>
       <a href="#education">Education</a>
+      <a href="#research">Job Market Paper</a>
+      <a href="#working-papers">Working Papers</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#conferences">Conferences</a>
       <a href="#honors">Honors</a>
+      <a href="#media">Media</a>
       <a href="#contact">Contact</a>
     </div>
   </div>
@@ -362,8 +360,7 @@
       <div>
         <h1 class="hero-name">Yuye Ding</h1>
         <p class="hero-role">
-          PhD Candidate in Accounting, <strong>University of Pittsburgh</strong> — 2026&ndash;27 job market candidate
-          researching corporate governance, financial reporting, labor markets, and artificial intelligence.
+          PhD Candidate in Accounting, <strong>University of Pittsburgh</strong> — 2026&ndash;27 job market candidate.
         </p>
       </div>
       <div class="ledger-card mono">
@@ -374,9 +371,9 @@
       </div>
     </div>
     <div class="hero-links">
-      <a class="btn primary" href="mailto:yud69@pitt.edu">Email me</a>
-      <a class="btn" href="https://linkedin.com/in/yuye-ding-81a01817b" target="_blank" rel="noopener">LinkedIn</a>
-      <a class="btn" href="https://ssrn.com/abstract=4675401" target="_blank" rel="noopener">SSRN</a>
+      <a class="link-plain" href="mailto:yud69@pitt.edu">yud69@pitt.edu</a>
+      <span class="link-divider">·</span>
+      <a class="link-plain" href="https://linkedin.com/in/yuye-ding-81a01817b" target="_blank" rel="noopener">linkedin.com/in/yuye-ding-81a01817b</a>
     </div>
   </div>
 </header>
@@ -394,9 +391,29 @@
     </p>
     <p>
       I anticipate graduating in April 2027 and will be available for appointments starting summer or fall 2027.
-      Thank you so much for taking the time to look at my profile — I would be delighted to speak with any school
-      interested in learning more or scheduling an interview.
+      Thank you so much for taking the time to look at my profile.
     </p>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Curriculum Vitae</span>
+      <h2>Education</h2>
+    </div>
+    <div class="entry-row">
+      <div class="who"><h3>Ph.D. in Accounting</h3><div class="sub">University of Pittsburgh</div></div>
+      <div class="when mono">Aug 2022 – Present</div>
+    </div>
+    <div class="entry-row">
+      <div class="who"><h3>M.S. in Accountancy — Tax / Data Analytics Track</h3><div class="sub">University of Notre Dame</div></div>
+      <div class="when mono">Aug 2021 – May 2022</div>
+    </div>
+    <div class="entry-row">
+      <div class="who"><h3>B.A. in Accounting</h3><div class="sub">Sichuan University</div></div>
+      <div class="when mono">Sep 2016 – Jun 2020</div>
+    </div>
   </div>
 </section>
 
@@ -404,7 +421,7 @@
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow">Publication Record</span>
-      <h2>Research</h2>
+      <h2>Job Market Paper</h2>
     </div>
 
     <div class="jmp-card">
@@ -415,9 +432,15 @@
         Mary Ellen Carter (external, Boston College)
       </div>
     </div>
+  </div>
+</section>
 
-    <div style="margin-top:44px;">
-      <span class="eyebrow">Working Papers</span>
+<section id="working-papers">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Publication Record</span>
+      <h2>Working Papers</h2>
+    </div>
 
       <div class="paper">
         <div class="paper-top">
@@ -445,7 +468,6 @@
         <ul class="notes">
           <li>Named by the <em>Financial Times</em> among business school studies with the highest real-world impact</li>
           <li>Covered by news media 500+ times; over 2 billion views in 2024</li>
-          <li>Top 300 most-downloaded study on SSRN across all disciplines (as of Jan 2025)</li>
           <li>Cited twice in U.S. House Committee hearings on federal workplace policy</li>
           <li>Cited by UK Parliament, Home-based Working Committee meeting (Mar 2025)</li>
         </ul>
@@ -489,18 +511,57 @@
           <li>Featured by Fortune, Business Insider, and the Pittsburgh Post-Gazette</li>
         </ul>
       </div>
-    </div>
+  </div>
+</section>
 
-    <div style="margin-top:44px;">
-      <span class="eyebrow">Conferences &amp; Workshops</span>
-      <div class="conf-row"><span>2026 AAA Global Connect (formerly Annual Meeting) <span class="role">Presenter</span></span><span class="mono" style="font-size:0.82rem; color:var(--ink-faint);">Aug 2026</span></div>
-      <div class="conf-row"><span>2026 Financial Accounting and Reporting Section Midyear Meeting <span class="role">Participant</span></span><span class="mono" style="font-size:0.82rem; color:var(--ink-faint);">Jan 2026</span></div>
-      <div class="conf-row"><span>AAA/Deloitte Foundation/J. Michael Cook Doctoral Consortium <span class="role">Participant</span></span><span class="mono" style="font-size:0.82rem; color:var(--ink-faint);">Jun 2025</span></div>
-      <div class="conf-row"><span>Creating Resilient Organizations: Evidence from Research on Sustainability <span class="role">Participant</span></span><span class="mono" style="font-size:0.82rem; color:var(--ink-faint);">May 2025</span></div>
-      <div class="conf-row"><span>Academy of Management Annual Meeting <span class="role">Presenter</span></span><span class="mono" style="font-size:0.82rem; color:var(--ink-faint);">Aug 2024</span></div>
-      <div class="conf-row"><span>Hawaii Accounting Research Doctoral Institute (HARDI) Consortium <span class="role">Participant</span></span><span class="mono" style="font-size:0.82rem; color:var(--ink-faint);">Jun 2024</span></div>
-      <div class="conf-row"><span>AAA Spark Meeting <span class="role">Presenter</span></span><span class="mono" style="font-size:0.82rem; color:var(--ink-faint);">May 2024</span></div>
+<section id="teaching">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Classroom</span>
+      <h2>Teaching Experience</h2>
     </div>
+    <div class="entry-row">
+      <div class="who"><h3>Lecturer — Financial Accounting</h3><div class="sub">University of Pittsburgh · Evaluation 4.24 / 5.00</div></div>
+      <div class="when mono">Fall 2025</div>
+    </div>
+    <div class="entry-row">
+      <div class="who"><h3>Lecturer — Financial Accounting</h3><div class="sub">University of Pittsburgh · Evaluation 4.27 / 5.00</div></div>
+      <div class="when mono">Spring 2025</div>
+    </div>
+    <div class="entry-row">
+      <div class="who"><h3>Teaching Assistant — Financial Accounting</h3><div class="sub">To Nicole Cade, University of Pittsburgh</div></div>
+      <div class="when mono">Fall 2024</div>
+    </div>
+  </div>
+</section>
+
+<section id="conferences">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Presentations</span>
+      <h2>Conferences &amp; Workshops</h2>
+    </div>
+    <div class="conf-row"><span>2026 AAA Global Connect (formerly Annual Meeting) <span class="role">Presenter</span></span><span class="mono" style="font-size:0.82rem; color:var(--ink-faint);">Aug 2026</span></div>
+    <div class="conf-row"><span>2026 Financial Accounting and Reporting Section Midyear Meeting <span class="role">Participant</span></span><span class="mono" style="font-size:0.82rem; color:var(--ink-faint);">Jan 2026</span></div>
+    <div class="conf-row"><span>AAA/Deloitte Foundation/J. Michael Cook Doctoral Consortium <span class="role">Participant</span></span><span class="mono" style="font-size:0.82rem; color:var(--ink-faint);">Jun 2025</span></div>
+    <div class="conf-row"><span>Creating Resilient Organizations: Evidence from Research on Sustainability <span class="role">Participant</span></span><span class="mono" style="font-size:0.82rem; color:var(--ink-faint);">May 2025</span></div>
+    <div class="conf-row"><span>Academy of Management Annual Meeting <span class="role">Presenter</span></span><span class="mono" style="font-size:0.82rem; color:var(--ink-faint);">Aug 2024</span></div>
+    <div class="conf-row"><span>Hawaii Accounting Research Doctoral Institute (HARDI) Consortium <span class="role">Participant</span></span><span class="mono" style="font-size:0.82rem; color:var(--ink-faint);">Jun 2024</span></div>
+    <div class="conf-row"><span>AAA Spark Meeting <span class="role">Presenter</span></span><span class="mono" style="font-size:0.82rem; color:var(--ink-faint);">May 2024</span></div>
+  </div>
+</section>
+
+<section id="honors">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Recognition</span>
+      <h2>Honors &amp; Awards</h2>
+    </div>
+    <ul class="honors-grid">
+      <li>Sheth Fellowship Award, 2025</li>
+      <li>Jacob Birnberg Recognition Award, 2024/2025</li>
+      <li>Association of Chartered Certified Accountants (ACCA)</li>
+    </ul>
   </div>
 </section>
 
@@ -515,7 +576,6 @@
       <div class="stat"><span class="num" data-target="4" data-suffix="B+">0</span><span class="lbl">Total media views</span></div>
       <div class="stat"><span class="num" data-target="600" data-suffix="+">0</span><span class="lbl">Press mentions</span></div>
       <div class="stat"><span class="num" data-target="2" data-suffix="x">0</span><span class="lbl">US House citations</span></div>
-      <div class="stat"><span class="num" data-target="300" data-prefix="Top " data-suffix="">0</span><span class="lbl">SSRN downloads rank</span></div>
     </div>
 
     <div class="press-list" id="pressList">
@@ -553,62 +613,6 @@
   </div>
 </section>
 
-<section id="teaching">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Classroom</span>
-      <h2>Teaching Experience</h2>
-    </div>
-    <div class="entry-row">
-      <div class="who"><h3>Lecturer — Financial Accounting</h3><div class="sub">University of Pittsburgh · Evaluation 4.24 / 5.00</div></div>
-      <div class="when mono">Fall 2025</div>
-    </div>
-    <div class="entry-row">
-      <div class="who"><h3>Lecturer — Financial Accounting</h3><div class="sub">University of Pittsburgh · Evaluation 4.27 / 5.00</div></div>
-      <div class="when mono">Spring 2025</div>
-    </div>
-    <div class="entry-row">
-      <div class="who"><h3>Teaching Assistant — Financial Accounting</h3><div class="sub">To Nicole Cade, University of Pittsburgh</div></div>
-      <div class="when mono">Fall 2024</div>
-    </div>
-  </div>
-</section>
-
-<section id="education">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Curriculum Vitae</span>
-      <h2>Education</h2>
-    </div>
-    <div class="entry-row">
-      <div class="who"><h3>Ph.D. in Accounting</h3><div class="sub">University of Pittsburgh</div></div>
-      <div class="when mono">Aug 2022 – Present</div>
-    </div>
-    <div class="entry-row">
-      <div class="who"><h3>M.S. in Accountancy — Tax / Data Analytics Track</h3><div class="sub">University of Notre Dame</div></div>
-      <div class="when mono">Aug 2021 – May 2022</div>
-    </div>
-    <div class="entry-row">
-      <div class="who"><h3>B.A. in Accounting</h3><div class="sub">Sichuan University</div></div>
-      <div class="when mono">Sep 2016 – Jun 2020</div>
-    </div>
-  </div>
-</section>
-
-<section id="honors">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Recognition</span>
-      <h2>Honors &amp; Awards</h2>
-    </div>
-    <ul class="honors-grid">
-      <li>Sheth Fellowship Award, 2025</li>
-      <li>Jacob Birnberg Recognition Award, 2024/2025</li>
-      <li>Association of Chartered Certified Accountants (ACCA)</li>
-    </ul>
-  </div>
-</section>
-
 <footer id="contact">
   <div class="wrap">
     <span class="eyebrow">Get in Touch</span>
@@ -620,7 +624,6 @@
     <div class="contact-links">
       <a href="mailto:yud69@pitt.edu">yud69@pitt.edu</a>
       <a href="https://linkedin.com/in/yuye-ding-81a01817b" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://ssrn.com/abstract=4675401" target="_blank" rel="noopener">SSRN profile</a>
     </div>
     <div class="fine">Last updated June 2026 · Pittsburgh, PA</div>
   </div>
